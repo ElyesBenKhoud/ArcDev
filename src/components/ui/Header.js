@@ -6,7 +6,7 @@ import { Toolbar } from "@material-ui/core";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import { makeStyles } from "@material-ui/styles";
 import { Tabs, Tab } from "@material-ui/core";
-
+import { Button } from "@material-ui/core";
 //scroll fix MUI Function
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -54,6 +54,9 @@ function Header(props) {
               <Tab className={classes.tab} label="About Us" />
               <Tab className={classes.tab} label="Contact Us" />
             </Tabs>
+            <Button variant="contained" color="secondary">
+              Free Estimate
+            </Button>
           </Toolbar>
         </AppBar>
       </ElevationScroll>
