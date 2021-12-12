@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../assets/logo.svg";
 //MUI inport
 import AppBar from "@material-ui/core/AppBar";
@@ -49,13 +49,24 @@ const useStyles = makeStyles((theme) => ({
 
 function Header(props) {
   const classes = useStyles();
+  //set the value to select the tab in the tabBar
+  const [value, setvalue] = useState(0);
+  // Func to handle the value on the click
+  const handleChange = (e, value) => {
+    setvalue(value);
+  };
   return (
     <React.Fragment>
       <ElevationScroll>
         <AppBar position="fixed" color="primary">
           <Toolbar disableGutters>
             <img src={logo} alt="logo" className={classes.logo} />
-            <Tabs className={classes.tabContainer}>
+            <Tabs
+              className={classes.tabContainer}
+              value={value}
+              onChange={handleChange}
+              indicatorColor="secondary"
+            >
               <Tab className={classes.tab} label="Home" />
               <Tab className={classes.tab} label="Services" />
               <Tab className={classes.tab} label="The Revolution" />
