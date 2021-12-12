@@ -78,6 +78,7 @@ function Header(props) {
     } else if (window.location.pathname === "/estimate" && value !== 5) {
       setvalue(5);
     }
+    // add value to not keep extra performance
   }, [value]);
 
   return (
