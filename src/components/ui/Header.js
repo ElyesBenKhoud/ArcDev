@@ -82,7 +82,12 @@ function Header(props) {
       <ElevationScroll>
         <AppBar position="fixed" color="primary">
           <Toolbar disableGutters>
-            <Button component={Link} to="/" className={classes.logoContainer}>
+            <Button
+              onClick={() => setvalue(0)}
+              component={Link}
+              to="/"
+              className={classes.logoContainer}
+            >
               <img src={logo} alt="logo" className={classes.logo} />
             </Button>
             <Tabs
