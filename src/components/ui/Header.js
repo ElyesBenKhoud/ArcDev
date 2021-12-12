@@ -8,6 +8,8 @@ import { makeStyles } from "@material-ui/styles";
 import { Tabs, Tab } from "@material-ui/core";
 import { Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import { Menu } from "@material-ui/core";
+import { MenuItem } from "@material-ui/core";
 //scroll fix MUI Function
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -62,7 +64,19 @@ function Header(props) {
   const handleChange = (e, value) => {
     setvalue(value);
   };
-
+  // menu setting
+  const [anchorEl, setanchorEl] = useState(null);
+  const [open, setopen] = useState(false);
+  //opening menu
+  const handleClick = (e) => {
+    setanchorEl(e.currentTarget);
+    setopen(true);
+  };
+  //closing menu
+  const handleClose = (e) => {
+    setanchorEl(null);
+    setopen(false);
+  };
   // keep track of the active button in the nav
   useEffect(() => {
     if (window.location.pathname === "/" && value !== 0) {
@@ -112,6 +126,9 @@ function Header(props) {
                 component={Link}
                 to="/services"
                 label="Services"
+                aria-owns={anchorEl ? "simple-menu" : undefined}
+                aria-haspopup={anchorEl ? "true" : undefined}
+                onClick={(e) => handleClick(e)}
               />
               <Tab
                 className={classes.tab}
@@ -141,6 +158,18 @@ function Header(props) {
             >
               Free Estimate
             </Button>
+            <Menu
+              id="simple-menu"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+            >
+              <MenuItem onClick={handleClose}>
+                custom software development
+              </MenuItem>
+              <MenuItem onClick={handleClose}> mobile app development</MenuItem>
+              <MenuItem onClick={handleClose}> website development</MenuItem>
+            </Menu>
           </Toolbar>
         </AppBar>
       </ElevationScroll>
