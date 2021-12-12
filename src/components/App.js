@@ -7,6 +7,7 @@ class App extends Component {
     return (
       <ThemeProvider theme={Theme}>
         <Header />
+        hello
       </ThemeProvider>
     );
   }
