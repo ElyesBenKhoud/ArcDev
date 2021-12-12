@@ -128,7 +128,7 @@ function Header(props) {
                 label="Services"
                 aria-owns={anchorEl ? "simple-menu" : undefined}
                 aria-haspopup={anchorEl ? "true" : undefined}
-                onClick={(e) => handleClick(e)}
+                onMouseOver={(e) => handleClick(e)}
               />
               <Tab
                 className={classes.tab}
@@ -163,6 +163,7 @@ function Header(props) {
               anchorEl={anchorEl}
               open={open}
               onClose={handleClose}
+              MenuListProps={{ onMouseLeave: handleClose }}
             >
               <MenuItem onClick={handleClose}>
                 custom software development
