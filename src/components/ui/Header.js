@@ -171,6 +171,16 @@ function Header(props) {
                   setvalue(1);
                 }}
                 component={Link}
+                to="/services"
+              >
+                Services
+              </MenuItem>
+              <MenuItem
+                onClick={() => {
+                  handleClose();
+                  setvalue(1);
+                }}
+                component={Link}
                 to="/customsoftware"
               >
                 custom software development
