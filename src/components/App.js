@@ -10,7 +10,15 @@ class App extends Component {
         <BrowserRouter>
           <Header />
           <Switch>
-            <Route />
+            <Route exact path="/" component={() => <div>Hoooooome</div>} />
+            <Route exact path="/" component={() => <div>Hoooooome</div>} />
+            <Route exact path="/" component={() => <div>Hoooooome</div>} />
+            <Route exact path="/" component={() => <div>Hoooooome</div>} />
+            <Route exact path="/" component={() => <div>Hoooooome</div>} />
+            <Route exact path="/" component={() => <div>Hoooooome</div>} />
+            <Route exact path="/" component={() => <div>Hoooooome</div>} />
+            <Route exact path="/" component={() => <div>Hoooooome</div>} />
+            <Route exact path="/" component={() => <div>Hoooooome</div>} />
           </Switch>
         </BrowserRouter>
       </ThemeProvider>
