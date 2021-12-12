@@ -57,6 +57,7 @@ const useStyles = makeStyles((theme) => ({
   menu: {
     backgroundColor: "#0B72B9",
     color: "white",
+    borderRadius: "0px",
   },
   menuItem: {
     ...theme.typography.tab,
@@ -78,6 +79,8 @@ function Header(props) {
   // menu setting
   const [anchorEl, setanchorEl] = useState(null);
   const [open, setopen] = useState(false);
+  //keep track of the active metu component
+  const [selectIndex, setselectIndex] = useState(0);
   //opening menu
   const handleClick = (e) => {
     setanchorEl(e.currentTarget);
@@ -88,6 +91,34 @@ function Header(props) {
     setanchorEl(null);
     setopen(false);
   };
+
+  //
+  const handleMenuClick = (e, i) => {
+    setanchorEl(null);
+    setopen(false);
+    setselectIndex(i);
+  };
+
+  //menuoptions
+  const MenuOptions = [
+    {
+      name: "Services",
+      Link: "/services",
+    },
+    {
+      name: "Custom Software development",
+      Link: "/customsoftware",
+    },
+    {
+      name: "Mobile app development",
+      Link: "/mobileapps",
+    },
+    {
+      name: "Website development",
+      Link: "/websites",
+    },
+  ];
+
   // keep track of the active button in the nav
   useEffect(() => {
     if (window.location.pathname === "/" && value !== 0) {
@@ -178,52 +209,22 @@ function Header(props) {
               classes={{ paper: classes.menu }}
               elevation={0}
             >
-              <MenuItem
-                onClick={() => {
-                  handleClose();
-                  setvalue(1);
-                }}
-                component={Link}
-                to="/services"
-                classes={{ root: classes.menuItem }}
-              >
-                Services
-              </MenuItem>
-              <MenuItem
-                onClick={() => {
-                  handleClose();
-                  setvalue(1);
-                }}
-                component={Link}
-                to="/customsoftware"
-                classes={{ root: classes.menuItem }}
-              >
-                Custom software development
-              </MenuItem>
-              <MenuItem
-                onClick={() => {
-                  handleClose();
-                  setvalue(1);
-                }}
-                component={Link}
-                to="/mobileapps"
-                classes={{ root: classes.menuItem }}
-              >
-                {" "}
-                Mobile app development
-              </MenuItem>
-              <MenuItem
-                onClick={() => {
-                  handleClose();
-                  setvalue(1);
-                }}
-                component={Link}
-                to="/websites"
-                classes={{ root: classes.menuItem }}
-              >
-                {" "}
-                Website development
-              </MenuItem>
+              {MenuOptions.map((option, i) => (
+                <MenuItem
+                  key={option}
+                  component={Link}
+                  to={option.Link}
+                  classes={{ root: classes.menuItem }}
+                  onClick={(event) => {
+                    handleMenuClick(event, i);
+                    setvalue(1);
+                    handleClose();
+                  }}
+                  selected={i === selectIndex}
+                >
+                  {option.name}
+                </MenuItem>
+              ))}
             </Menu>
           </Toolbar>
         </AppBar>
