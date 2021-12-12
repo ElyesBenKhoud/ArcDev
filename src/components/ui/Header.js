@@ -220,7 +220,7 @@ function Header(props) {
                     setvalue(1);
                     handleClose();
                   }}
-                  selected={i === selectIndex}
+                  selected={i === selectIndex && value === 1}
                 >
                   {option.name}
                 </MenuItem>
