@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "25px",
   },
   button: {
+    // bring the attribute from theme file
     ...theme.typography.estimate,
     borderRadius: "50px",
     marginLeft: "50px",
