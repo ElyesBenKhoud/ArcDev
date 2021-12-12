@@ -32,6 +32,9 @@ const useStyles = makeStyles((theme) => ({
   },
   logoContainer: {
     padding: 0,
+    "&:hover": {
+      backgroundColor: "transparent",
+    },
   },
   tabContainer: {
     marginLeft: "auto",
@@ -87,6 +90,7 @@ function Header(props) {
               component={Link}
               to="/"
               className={classes.logoContainer}
+              disableRipple
             >
               <img src={logo} alt="logo" className={classes.logo} />
             </Button>
