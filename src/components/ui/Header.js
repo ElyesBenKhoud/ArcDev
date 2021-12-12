@@ -1,11 +1,13 @@
 import React from "react";
+import logo from "../../assets/logo.svg";
+//MUI inport
 import AppBar from "@material-ui/core/AppBar";
 import { Toolbar } from "@material-ui/core";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import { makeStyles } from "@material-ui/styles";
-import logo from "../../assets/logo.svg";
 import { Tabs, Tab } from "@material-ui/core";
 
+//scroll fix MUI Function
 function ElevationScroll(props) {
   const { children, window } = props;
   const trigger = useScrollTrigger({
@@ -18,7 +20,7 @@ function ElevationScroll(props) {
     elevation: trigger ? 4 : 0,
   });
 }
-
+//styles
 const useStyles = makeStyles((theme) => ({
   toolbarMargin: {
     ...theme.mixins.toolbar,
