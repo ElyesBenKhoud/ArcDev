@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../assets/logo.svg";
 //MUI inport
 import AppBar from "@material-ui/core/AppBar";
@@ -56,6 +56,21 @@ function Header(props) {
   const handleChange = (e, value) => {
     setvalue(value);
   };
+
+  // keep track of the active button in the nav
+  useEffect(() => {
+    if (window.location.pathname === "/" && value !== 0) {
+      setvalue(0);
+    } else if (window.location.pathname === "/services" && value !== 1) {
+      setvalue(1);
+    } else if (window.location.pathname === "/revolution" && value !== 2) {
+      setvalue(2);
+    } else if (window.location.pathname === "/about" && value !== 3) {
+      setvalue(3);
+    } else if (window.location.pathname === "/contact" && value !== 4) {
+      setvalue(4);
+    }
+  });
 
   return (
     <React.Fragment>
