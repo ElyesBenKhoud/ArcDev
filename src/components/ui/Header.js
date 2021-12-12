@@ -7,6 +7,7 @@ import useScrollTrigger from "@mui/material/useScrollTrigger";
 import { makeStyles } from "@material-ui/styles";
 import { Tabs, Tab } from "@material-ui/core";
 import { Button } from "@material-ui/core";
+import { Link } from "react-router-dom";
 //scroll fix MUI Function
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -68,11 +69,36 @@ function Header(props) {
               onChange={handleChange}
               indicatorColor="secondary"
             >
-              <Tab className={classes.tab} label="Home" />
-              <Tab className={classes.tab} label="Services" />
-              <Tab className={classes.tab} label="The Revolution" />
-              <Tab className={classes.tab} label="About Us" />
-              <Tab className={classes.tab} label="Contact Us" />
+              <Tab
+                className={classes.tab}
+                component={Link}
+                to="/"
+                label="Home"
+              />
+              <Tab
+                className={classes.tab}
+                component={Link}
+                to="/services"
+                label="Services"
+              />
+              <Tab
+                className={classes.tab}
+                component={Link}
+                label="The Revolution"
+                to="/revolution"
+              />
+              <Tab
+                className={classes.tab}
+                component={Link}
+                label="About Us"
+                to="/about"
+              />
+              <Tab
+                className={classes.tab}
+                component={Link}
+                label="Contact Us"
+                to="/contact"
+              />
             </Tabs>
             <Button
               variant="contained"
