@@ -21,6 +21,7 @@ function ElevationScroll(props) {
 const useStyles = makeStyles((theme) => ({
   toolbarMargin: {
     ...theme.mixins.toolbar,
+    marginBottom: "3em",
   },
   logo: {
     height: "6em",
@@ -33,7 +34,7 @@ function Header(props) {
     <React.Fragment>
       <ElevationScroll>
         <AppBar position="fixed" color="primary">
-          <Toolbar disabledGutters>
+          <Toolbar disableGutters>
             <img src={logo} alt="logo" className={classes.logo} />
           </Toolbar>
         </AppBar>
