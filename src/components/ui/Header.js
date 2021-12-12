@@ -54,6 +54,17 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "25px",
     height: "45px",
   },
+  menu: {
+    backgroundColor: "#0B72B9",
+    color: "white",
+  },
+  menuItem: {
+    ...theme.typography.tab,
+    opacity: 0.7,
+    "&:hover": {
+      opacity: 1,
+    },
+  },
 }));
 
 function Header(props) {
@@ -164,6 +175,8 @@ function Header(props) {
               open={open}
               onClose={handleClose}
               MenuListProps={{ onMouseLeave: handleClose }}
+              classes={{ paper: classes.menu }}
+              elevation={0}
             >
               <MenuItem
                 onClick={() => {
@@ -172,6 +185,7 @@ function Header(props) {
                 }}
                 component={Link}
                 to="/services"
+                classes={{ root: classes.menuItem }}
               >
                 Services
               </MenuItem>
@@ -182,8 +196,9 @@ function Header(props) {
                 }}
                 component={Link}
                 to="/customsoftware"
+                classes={{ root: classes.menuItem }}
               >
-                custom software development
+                Custom software development
               </MenuItem>
               <MenuItem
                 onClick={() => {
@@ -192,9 +207,10 @@ function Header(props) {
                 }}
                 component={Link}
                 to="/mobileapps"
+                classes={{ root: classes.menuItem }}
               >
                 {" "}
-                mobile app development
+                Mobile app development
               </MenuItem>
               <MenuItem
                 onClick={() => {
@@ -203,9 +219,10 @@ function Header(props) {
                 }}
                 component={Link}
                 to="/websites"
+                classes={{ root: classes.menuItem }}
               >
                 {" "}
-                website development
+                Website development
               </MenuItem>
             </Menu>
           </Toolbar>
