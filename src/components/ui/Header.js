@@ -69,8 +69,10 @@ function Header(props) {
       setvalue(3);
     } else if (window.location.pathname === "/contact" && value !== 4) {
       setvalue(4);
+    } else if (window.location.pathname === "/estimate" && value !== 5) {
+      setvalue(5);
     }
-  });
+  }, [value]);
 
   return (
     <React.Fragment>
