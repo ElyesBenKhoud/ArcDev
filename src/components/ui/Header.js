@@ -28,7 +28,10 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "3em",
   },
   logo: {
-    height: "6em",
+    height: "8em",
+  },
+  logoContainer: {
+    padding: 0,
   },
   tabContainer: {
     marginLeft: "auto",
@@ -79,7 +82,9 @@ function Header(props) {
       <ElevationScroll>
         <AppBar position="fixed" color="primary">
           <Toolbar disableGutters>
-            <img src={logo} alt="logo" className={classes.logo} />
+            <Button component={Link} to="/" className={classes.logoContainer}>
+              <img src={logo} alt="logo" className={classes.logo} />
+            </Button>
             <Tabs
               className={classes.tabContainer}
               value={value}
@@ -121,6 +126,8 @@ function Header(props) {
               variant="contained"
               color="secondary"
               className={classes.button}
+              component={Link}
+              to="/estimate"
             >
               Free Estimate
             </Button>
