@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import Header from "./ui/Header";
-
+import { ThemeProvider } from "@material-ui/styles";
+import Theme from "./ui/Theme";
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <ThemeProvider theme={Theme}>
         <Header />
-      </div>
+      </ThemeProvider>
     );
   }
 }
