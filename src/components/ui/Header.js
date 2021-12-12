@@ -30,6 +30,11 @@ const useStyles = makeStyles((theme) => ({
   tabContainer: {
     marginLeft: "auto",
   },
+  tab: {
+    fontFamily: "Raleway",
+    textTransform: "none",
+    fontWeight: 700,
+  },
 }));
 
 function Header(props) {
@@ -41,11 +46,11 @@ function Header(props) {
           <Toolbar disableGutters>
             <img src={logo} alt="logo" className={classes.logo} />
             <Tabs className={classes.tabContainer}>
-              <Tab label="Home" />
-              <Tab label="Services" />
-              <Tab label="The Revolution" />
-              <Tab label="About Us" />
-              <Tab label="Contact Us" />
+              <Tab className={classes.tab} label="Home" />
+              <Tab className={classes.tab} label="Services" />
+              <Tab className={classes.tab} label="The Revolution" />
+              <Tab className={classes.tab} label="About Us" />
+              <Tab className={classes.tab} label="Contact Us" />
             </Tabs>
           </Toolbar>
         </AppBar>
