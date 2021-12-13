@@ -269,6 +269,7 @@ function Header(props) {
             >
               <img src={logo} alt="logo" className={classes.logo} />
             </Button>
+            {/* if the screen is full render tabs otherwise don't */}
             {matches ? null : tabs}
           </Toolbar>
         </AppBar>
