@@ -13,7 +13,7 @@ import { MenuItem } from "@material-ui/core";
 import { useMediaQuery } from "@material-ui/core";
 import { useTheme } from "@material-ui/core/styles";
 import { SwipeableDrawer } from "@material-ui/core";
-import { MenuItem } from "@material-ui/icons";
+import { MenuIcon } from "@material-ui/icons";
 //scroll fix MUI Function
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -87,33 +87,35 @@ const useStyles = makeStyles((theme) => ({
 function Header(props) {
   const classes = useStyles();
   const theme = useTheme();
+  const IOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
   const matches = useMediaQuery(theme.breakpoints.down("md"));
+  const [openDrawer, setopenDrawer] = useState(false);
   //set the value to select the tab in the tabBar
   const [value, setvalue] = useState(0);
   // Func to handle the value on the click
-  const handleChange = (e, value) => {
-    setvalue(value);
+  const handleChange = (e, newValue) => {
+    setvalue(newValue);
   };
   // menu setting
   const [anchorEl, setanchorEl] = useState(null);
-  const [open, setopen] = useState(false);
+  const [openMenu, setopenMenu] = useState(false);
   //keep track of the active metu component
   const [selectIndex, setselectIndex] = useState(0);
   //opening menu
   const handleClick = (e) => {
     setanchorEl(e.currentTarget);
-    setopen(true);
+    setopenMenu(true);
   };
   //closing menu
   const handleClose = (e) => {
     setanchorEl(null);
-    setopen(false);
+    setopenMenu(false);
   };
 
   // handle the click in the menu
   const handleMenuClick = (e, i) => {
     setanchorEl(null);
-    setopen(false);
+    setopenMenu(false);
     setselectIndex(i);
   };
 
@@ -243,7 +245,7 @@ function Header(props) {
       <Menu
         id="simple-menu"
         anchorEl={anchorEl}
-        open={open}
+        open={openMenu}
         onClose={handleClose}
         MenuListProps={{ onMouseLeave: handleClose }}
         classes={{ paper: classes.menu }}
