@@ -10,6 +10,8 @@ import { Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { Menu } from "@material-ui/core";
 import { MenuItem } from "@material-ui/core";
+import { useMediaQuery } from "@material-ui/core";
+import { useTheme } from "@material-ui/core/styles";
 //scroll fix MUI Function
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -70,6 +72,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Header(props) {
   const classes = useStyles();
+  const theme = useTheme();
   //set the value to select the tab in the tabBar
   const [value, setvalue] = useState(0);
   // Func to handle the value on the click
