@@ -109,6 +109,9 @@ const useStyles = makeStyles((theme) => ({
   drawerItemSelectedStyle: {
     opacity: 1,
   },
+  appbar: {
+    zIndex: theme.zIndex.modal + 1,
+  },
 }));
 
 function Header(props) {
@@ -305,6 +308,7 @@ function Header(props) {
         onOpen={() => setopenDrawer(true)}
         classes={{ paper: classes.drawer }}
       >
+        <div className={classes.toolbarMargin} />
         <List disablePadding>
           <ListItem
             divider
@@ -454,7 +458,7 @@ function Header(props) {
   return (
     <React.Fragment>
       <ElevationScroll>
-        <AppBar position="fixed" color="primary">
+        <AppBar position="fixed" color="primary" className={classes.appbar}>
           <Toolbar disableGutters>
             <Button
               onClick={() => setvalue(0)}
