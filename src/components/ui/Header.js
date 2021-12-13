@@ -294,22 +294,58 @@ function Header(props) {
         onOpen={() => setopenDrawer(true)}
       >
         <List disablePadding>
-          <ListItem divider button component={Link} to="/">
+          <ListItem
+            divider
+            button
+            component={Link}
+            to="/"
+            onClick={() => setopenDrawer(false)}
+          >
             <ListItemText disableTypography>Home</ListItemText>
           </ListItem>
-          <ListItem divider button component={Link} to="/services">
+          <ListItem
+            divider
+            button
+            component={Link}
+            to="/services"
+            onClick={() => setopenDrawer(false)}
+          >
             <ListItemText disableTypography>services</ListItemText>
           </ListItem>
-          <ListItem divider button component={Link} to="/revolution">
+          <ListItem
+            divider
+            button
+            component={Link}
+            to="/revolution"
+            onClick={() => setopenDrawer(false)}
+          >
             <ListItemText disableTypography>revolution</ListItemText>
           </ListItem>
-          <ListItem divider button component={Link} to="/about">
+          <ListItem
+            divider
+            button
+            component={Link}
+            to="/about"
+            onClick={() => setopenDrawer(false)}
+          >
             <ListItemText disableTypography>About us</ListItemText>
           </ListItem>
-          <ListItem divider button component={Link} to="/contact">
+          <ListItem
+            divider
+            button
+            component={Link}
+            to="/contact"
+            onClick={() => setopenDrawer(false)}
+          >
             <ListItemText disableTypography>Contact us</ListItemText>
           </ListItem>
-          <ListItem divider button component={Link} to="/estimate">
+          <ListItem
+            divider
+            button
+            component={Link}
+            to="/estimate"
+            onClick={() => setopenDrawer(false)}
+          >
             <ListItemText disableTypography>Estimate</ListItemText>
           </ListItem>
         </List>
