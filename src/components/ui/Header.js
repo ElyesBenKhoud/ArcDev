@@ -342,7 +342,14 @@ function Header(props) {
             }}
             selected={value === 1}
           >
-            <ListItemText className={classes.drawerItem} disableTypography>
+            <ListItemText
+              className={
+                value === 1
+                  ? [classes.drawerItem, classes.drawerItemSelectedStyle]
+                  : classes.drawerItem
+              }
+              disableTypography
+            >
               services
             </ListItemText>
           </ListItem>
@@ -357,7 +364,14 @@ function Header(props) {
             }}
             selected={value === 2}
           >
-            <ListItemText className={classes.drawerItem} disableTypography>
+            <ListItemText
+              className={
+                value === 2
+                  ? [classes.drawerItem, classes.drawerItemSelectedStyle]
+                  : classes.drawerItem
+              }
+              disableTypography
+            >
               revolution
             </ListItemText>
           </ListItem>
@@ -372,7 +386,14 @@ function Header(props) {
             }}
             selected={value === 3}
           >
-            <ListItemText className={classes.drawerItem} disableTypography>
+            <ListItemText
+              className={
+                value === 3
+                  ? [classes.drawerItem, classes.drawerItemSelectedStyle]
+                  : classes.drawerItem
+              }
+              disableTypography
+            >
               About us
             </ListItemText>
           </ListItem>
@@ -387,7 +408,14 @@ function Header(props) {
             }}
             selected={value === 4}
           >
-            <ListItemText className={classes.drawerItem} disableTypography>
+            <ListItemText
+              className={
+                value === 4
+                  ? [classes.drawerItem, classes.drawerItemSelectedStyle]
+                  : classes.drawerItem
+              }
+              disableTypography
+            >
               Contact us
             </ListItemText>
           </ListItem>
@@ -403,7 +431,14 @@ function Header(props) {
             className={classes.drawerItemEstimate}
             selected={value === 5}
           >
-            <ListItemText className={classes.drawerItem} disableTypography>
+            <ListItemText
+              className={
+                value === 5
+                  ? [classes.drawerItem, classes.drawerItemSelectedStyle]
+                  : classes.drawerItem
+              }
+              disableTypography
+            >
               Estimate
             </ListItemText>
           </ListItem>
