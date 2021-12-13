@@ -310,7 +310,11 @@ function Header(props) {
             button
             component={Link}
             to="/"
-            onClick={() => setopenDrawer(false)}
+            onClick={() => {
+              setopenDrawer(false);
+              setvalue(0);
+            }}
+            selected={value === 0}
           >
             <ListItemText className={classes.drawerItem} disableTypography>
               Home
@@ -321,7 +325,11 @@ function Header(props) {
             button
             component={Link}
             to="/services"
-            onClick={() => setopenDrawer(false)}
+            onClick={() => {
+              setopenDrawer(false);
+              setvalue(1);
+            }}
+            selected={value === 1}
           >
             <ListItemText className={classes.drawerItem} disableTypography>
               services
@@ -332,7 +340,11 @@ function Header(props) {
             button
             component={Link}
             to="/revolution"
-            onClick={() => setopenDrawer(false)}
+            onClick={() => {
+              setopenDrawer(false);
+              setvalue(2);
+            }}
+            selected={value === 2}
           >
             <ListItemText className={classes.drawerItem} disableTypography>
               revolution
@@ -343,7 +355,11 @@ function Header(props) {
             button
             component={Link}
             to="/about"
-            onClick={() => setopenDrawer(false)}
+            onClick={() => {
+              setopenDrawer(false);
+              setvalue(3);
+            }}
+            selected={value === 3}
           >
             <ListItemText className={classes.drawerItem} disableTypography>
               About us
@@ -354,7 +370,11 @@ function Header(props) {
             button
             component={Link}
             to="/contact"
-            onClick={() => setopenDrawer(false)}
+            onClick={() => {
+              setopenDrawer(false);
+              setvalue(4);
+            }}
+            selected={value === 4}
           >
             <ListItemText className={classes.drawerItem} disableTypography>
               Contact us
@@ -365,8 +385,12 @@ function Header(props) {
             button
             component={Link}
             to="/estimate"
-            onClick={() => setopenDrawer(false)}
+            onClick={() => {
+              setopenDrawer(false);
+              setvalue(5);
+            }}
             className={classes.drawerItemEstimate}
+            selected={value === 5}
           >
             <ListItemText className={classes.drawerItem} disableTypography>
               Estimate
