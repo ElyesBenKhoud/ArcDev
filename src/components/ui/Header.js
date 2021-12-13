@@ -279,10 +279,12 @@ function Header(props) {
         MenuListProps={{ onMouseLeave: handleClose }}
         classes={{ paper: classes.menu }}
         elevation={0}
+        style={{ zIndex: 1302 }}
       >
         {MenuOptions.map((option, i) => (
           <MenuItem
-            key={option}
+            // key of each prop
+            key={`${option}${i}`}
             component={Link}
             to={option.Link}
             classes={{ root: classes.menuItem }}
