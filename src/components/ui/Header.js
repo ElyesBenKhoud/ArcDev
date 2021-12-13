@@ -151,18 +151,26 @@ function Header(props) {
     {
       name: "Services",
       Link: "/services",
+      activeIndex: 1,
+      selectedIndex: 0,
     },
     {
       name: "Custom Software development",
       Link: "/customsoftware",
+      activeIndex: 1,
+      selectedIndex: 1,
     },
     {
       name: "Mobile app development",
       Link: "/mobileapps",
+      activeIndex: 1,
+      selectedIndex: 2,
     },
     {
       name: "Website development",
       Link: "/websites",
+      activeIndex: 1,
+      selectedIndex: 3,
     },
   ];
 
@@ -170,81 +178,47 @@ function Header(props) {
     {
       name: "Home",
       link: "/",
+      activeIndex: 0,
     },
     {
       name: "Services",
       link: "/services",
+      activeIndex: 1,
     },
     {
       name: "Revolution",
       link: "/revolution",
+      activeIndex: 2,
     },
     {
       name: "About us",
       link: "/about",
+      activeIndex: 3,
     },
     {
       name: "Contact",
       link: "/contact",
+      activeIndex: 4,
     },
   ];
 
   // keep track of the active button in the nav
   useEffect(() => {
-    switch (window.location.pathname) {
-      case "/":
-        if (value !== 0) {
-          setvalue(0);
-        }
-        break;
-      case "/services":
-        if (value !== 1) {
-          setvalue(1);
-          setselectIndex(0);
-        }
-        break;
-      case "/customsoftware":
-        if (value !== 1) {
-          setvalue(1);
-          setselectIndex(1);
-        }
-        break;
-      case "/mobileapps":
-        if (value !== 1) {
-          setvalue(1);
-          setselectIndex(2);
-        }
-        break;
-      case "/websites":
-        if (value !== 1) {
-          setvalue(1);
-          setselectIndex(3);
-        }
-        break;
-      case "/revolution":
-        if (value !== 2) {
-          setvalue(2);
-        }
-        break;
-      case "/about":
-        if (value !== 3) {
-          setvalue(3);
-        }
-        break;
-
-      case "/contact":
-        if (value !== 4) {
-          setvalue(4);
-        }
-        break;
-      case "/estimate":
-        if (value !== 5) {
-          setvalue(5);
-        }
-      default:
-        break;
-    }
-  }, [value]);
+    [...MenuOptions, ...routes].forEach((route) => {
+      switch (window.location.pathname) {
+        case `${route.link}`:
+          if (value !== route.activeIndex) {
+            setvalue(route.activeIndex);
+            if (route.selectedIndex && route.selectedIndex !== selectIndex) {
+              setselectIndex(route.selectedIndex);
+            }
+          }
+          break;
+        default:
+          break;
+      }
+    });
+  }, [value, MenuOptions, selectIndex, routes]);
 
   const tabs = (
     <React.Fragment>
