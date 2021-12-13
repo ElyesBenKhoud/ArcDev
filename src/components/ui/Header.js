@@ -121,20 +121,6 @@ function Header(props) {
 
   // keep track of the active button in the nav
   useEffect(() => {
-    if (window.location.pathname === "/" && value !== 0) {
-      setvalue(0);
-    } else if (window.location.pathname === "/services" && value !== 1) {
-      setvalue(1);
-    } else if (window.location.pathname === "/revolution" && value !== 2) {
-      setvalue(2);
-    } else if (window.location.pathname === "/about" && value !== 3) {
-      setvalue(3);
-    } else if (window.location.pathname === "/contact" && value !== 4) {
-      setvalue(4);
-    } else if (window.location.pathname === "/estimate" && value !== 5) {
-      setvalue(5);
-    }
-
     switch (window.location.pathname) {
       case "/":
         if (value !== 0) {
