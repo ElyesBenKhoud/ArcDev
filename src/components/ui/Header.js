@@ -127,41 +127,35 @@ function Header(props) {
           setvalue(0);
         }
         break;
-
       case "/services":
         if (value !== 1) {
           setvalue(1);
           setselectIndex(0);
         }
         break;
-
-      case "/revolution":
-        if (value !== 2) {
-          setvalue(2);
-        }
-        break;
-
       case "/customsoftware":
         if (value !== 1) {
           setvalue(1);
           setselectIndex(1);
         }
         break;
-
       case "/mobileapps":
         if (value !== 1) {
           setvalue(1);
           setselectIndex(2);
         }
         break;
-
       case "/websites":
         if (value !== 1) {
           setvalue(1);
           setselectIndex(3);
         }
         break;
-
+      case "/revolution":
+        if (value !== 2) {
+          setvalue(2);
+        }
+        break;
       case "/about":
         if (value !== 3) {
           setvalue(3);
@@ -173,7 +167,6 @@ function Header(props) {
           setvalue(4);
         }
         break;
-
       case "/estimate":
         if (value !== 5) {
           setvalue(5);
