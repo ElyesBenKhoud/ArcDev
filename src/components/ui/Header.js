@@ -134,6 +134,67 @@ function Header(props) {
     } else if (window.location.pathname === "/estimate" && value !== 5) {
       setvalue(5);
     }
+
+    switch (window.location.pathname) {
+      case "/":
+        if (value !== 0) {
+          setvalue(0);
+        }
+        break;
+
+      case "/services":
+        if (value !== 1) {
+          setvalue(1);
+          setselectIndex(0);
+        }
+        break;
+
+      case "/revolution":
+        if (value !== 2) {
+          setvalue(2);
+        }
+        break;
+
+      case "/customsoftware":
+        if (value !== 1) {
+          setvalue(1);
+          setselectIndex(1);
+        }
+        break;
+
+      case "/mobileapps":
+        if (value !== 1) {
+          setvalue(1);
+          setselectIndex(2);
+        }
+        break;
+
+      case "/websites":
+        if (value !== 1) {
+          setvalue(1);
+          setselectIndex(3);
+        }
+        break;
+
+      case "/about":
+        if (value !== 3) {
+          setvalue(3);
+        }
+        break;
+
+      case "/contact":
+        if (value !== 4) {
+          setvalue(4);
+        }
+        break;
+
+      case "/estimate":
+        if (value !== 5) {
+          setvalue(5);
+        }
+      default:
+        break;
+    }
   }, [value]);
 
   return (
