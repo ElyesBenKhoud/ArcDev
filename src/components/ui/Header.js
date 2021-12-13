@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import logo from "../../assets/logo.svg";
 //MUI inport
 import AppBar from "@material-ui/core/AppBar";
-import { Toolbar } from "@material-ui/core";
+import { IconButton, Toolbar } from "@material-ui/core";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import { makeStyles } from "@material-ui/styles";
 import { Tabs, Tab } from "@material-ui/core";
@@ -13,7 +13,7 @@ import { MenuItem } from "@material-ui/core";
 import { useMediaQuery } from "@material-ui/core";
 import { useTheme } from "@material-ui/core/styles";
 import { SwipeableDrawer } from "@material-ui/core";
-import { MenuIcon } from "@material-ui/icons";
+import MenuIcon from "@material-ui/icons/Menu";
 //scroll fix MUI Function
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -87,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
 function Header(props) {
   const classes = useStyles();
   const theme = useTheme();
-  const IOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
+  const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
   const matches = useMediaQuery(theme.breakpoints.down("md"));
   const [openDrawer, setopenDrawer] = useState(false);
   //set the value to select the tab in the tabBar
@@ -271,6 +271,23 @@ function Header(props) {
     </React.Fragment>
   );
 
+  const drawer = (
+    <React.Fragment>
+      <SwipeableDrawer
+        disableBackdropTransition={!iOS}
+        disableDiscovery={iOS}
+        open={openDrawer}
+        onClose={() => setopenDrawer(false)}
+        onOpen={() => setopenDrawer(true)}
+      >
+        Example drawer
+      </SwipeableDrawer>
+      <IconButton onClick={() => setopenDrawer(!openDrawer)} disableRipple>
+        <MenuIcon />
+      </IconButton>
+    </React.Fragment>
+  );
+
   return (
     <React.Fragment>
       <ElevationScroll>
@@ -286,7 +303,7 @@ function Header(props) {
               <img src={logo} alt="logo" className={classes.logo} />
             </Button>
             {/* if the screen is full render tabs otherwise don't */}
-            {matches ? null : tabs}
+            {matches ? drawer : tabs}
           </Toolbar>
         </AppBar>
       </ElevationScroll>
