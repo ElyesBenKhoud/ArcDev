@@ -107,7 +107,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#FFBA60",
   },
   drawerItemSelectedStyle: {
-    opacity: 1,
+    "& .MuiListItemText-root": {
+      opacity: 1,
+    },
   },
   appbar: {
     zIndex: theme.zIndex.modal + 1,
@@ -320,15 +322,9 @@ function Header(props) {
               setvalue(0);
             }}
             selected={value === 0}
+            classes={{ selected: classes.drawerItemSelectedStyle }}
           >
-            <ListItemText
-              className={
-                value === 0
-                  ? [classes.drawerItem, classes.drawerItemSelectedStyle]
-                  : classes.drawerItem
-              }
-              disableTypography
-            >
+            <ListItemText className={classes.drawerItem} disableTypography>
               Home
             </ListItemText>
           </ListItem>
@@ -342,15 +338,9 @@ function Header(props) {
               setvalue(1);
             }}
             selected={value === 1}
+            classes={{ selected: classes.drawerItemSelectedStyle }}
           >
-            <ListItemText
-              className={
-                value === 1
-                  ? [classes.drawerItem, classes.drawerItemSelectedStyle]
-                  : classes.drawerItem
-              }
-              disableTypography
-            >
+            <ListItemText className={classes.drawerItem} disableTypography>
               services
             </ListItemText>
           </ListItem>
@@ -364,15 +354,9 @@ function Header(props) {
               setvalue(2);
             }}
             selected={value === 2}
+            classes={{ selected: classes.drawerItemSelectedStyle }}
           >
-            <ListItemText
-              className={
-                value === 2
-                  ? [classes.drawerItem, classes.drawerItemSelectedStyle]
-                  : classes.drawerItem
-              }
-              disableTypography
-            >
+            <ListItemText className={classes.drawerItem} disableTypography>
               revolution
             </ListItemText>
           </ListItem>
@@ -386,15 +370,9 @@ function Header(props) {
               setvalue(3);
             }}
             selected={value === 3}
+            classes={{ selected: classes.drawerItemSelectedStyle }}
           >
-            <ListItemText
-              className={
-                value === 3
-                  ? [classes.drawerItem, classes.drawerItemSelectedStyle]
-                  : classes.drawerItem
-              }
-              disableTypography
-            >
+            <ListItemText className={classes.drawerItem} disableTypography>
               About us
             </ListItemText>
           </ListItem>
@@ -408,15 +386,9 @@ function Header(props) {
               setvalue(4);
             }}
             selected={value === 4}
+            classes={{ selected: classes.drawerItemSelectedStyle }}
           >
-            <ListItemText
-              className={
-                value === 4
-                  ? [classes.drawerItem, classes.drawerItemSelectedStyle]
-                  : classes.drawerItem
-              }
-              disableTypography
-            >
+            <ListItemText className={classes.drawerItem} disableTypography>
               Contact us
             </ListItemText>
           </ListItem>
@@ -431,15 +403,9 @@ function Header(props) {
             }}
             className={classes.drawerItemEstimate}
             selected={value === 5}
+            classes={{ root: classes.drawerItemSelectedStyle }}
           >
-            <ListItemText
-              className={
-                value === 5
-                  ? [classes.drawerItem, classes.drawerItemSelectedStyle]
-                  : classes.drawerItem
-              }
-              disableTypography
-            >
+            <ListItemText className={classes.drawerItem} disableTypography>
               Estimate
             </ListItemText>
           </ListItem>
