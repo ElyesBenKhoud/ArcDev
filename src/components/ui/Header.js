@@ -12,6 +12,8 @@ import { Menu } from "@material-ui/core";
 import { MenuItem } from "@material-ui/core";
 import { useMediaQuery } from "@material-ui/core";
 import { useTheme } from "@material-ui/core/styles";
+import { SwipeableDrawer } from "@material-ui/core";
+import { MenuItem } from "@material-ui/icons";
 //scroll fix MUI Function
 function ElevationScroll(props) {
   const { children, window } = props;
