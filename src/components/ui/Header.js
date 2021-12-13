@@ -101,9 +101,13 @@ const useStyles = makeStyles((theme) => ({
   drawerItem: {
     ...theme.typography.tab,
     color: "white",
+    opacity: 0.7,
   },
   drawerItemEstimate: {
     backgroundColor: "#FFBA60",
+  },
+  drawerItemSelectedStyle: {
+    opacity: 1,
   },
 }));
 
@@ -316,7 +320,14 @@ function Header(props) {
             }}
             selected={value === 0}
           >
-            <ListItemText className={classes.drawerItem} disableTypography>
+            <ListItemText
+              className={
+                value === 0
+                  ? [classes.drawerItem, classes.drawerItemSelectedStyle]
+                  : classes.drawerItem
+              }
+              disableTypography
+            >
               Home
             </ListItemText>
           </ListItem>
