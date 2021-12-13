@@ -295,22 +295,22 @@ function Header(props) {
       >
         <List>
           <ListItem component={Link} to="/">
-            <ListItemText>Home</ListItemText>
+            <ListItemText disableTypography>Home</ListItemText>
           </ListItem>
           <ListItem component={Link} to="/services">
-            <ListItemText>services</ListItemText>
+            <ListItemText disableTypography>services</ListItemText>
           </ListItem>
           <ListItem component={Link} to="/revolution">
-            <ListItemText>revolution</ListItemText>
+            <ListItemText disableTypography>revolution</ListItemText>
           </ListItem>
           <ListItem component={Link} to="/about">
-            <ListItemText>About us</ListItemText>
+            <ListItemText disableTypography>About us</ListItemText>
           </ListItem>
           <ListItem component={Link} to="/contact">
-            <ListItemText>Contact us</ListItemText>
+            <ListItemText disableTypography>Contact us</ListItemText>
           </ListItem>
           <ListItem component={Link} to="/estimate">
-            <ListItemText>Estimate</ListItemText>
+            <ListItemText disableTypography>Estimate</ListItemText>
           </ListItem>
         </List>
       </SwipeableDrawer>
