@@ -166,6 +166,29 @@ function Header(props) {
     },
   ];
 
+  const routes = [
+    {
+      name: "Home",
+      link: "/",
+    },
+    {
+      name: "Services",
+      link: "/services",
+    },
+    {
+      name: "Revolution",
+      link: "/revolution",
+    },
+    {
+      name: "About us",
+      link: "/about",
+    },
+    {
+      name: "Contact",
+      link: "/contact",
+    },
+  ];
+
   // keep track of the active button in the nav
   useEffect(() => {
     switch (window.location.pathname) {
