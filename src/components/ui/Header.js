@@ -293,23 +293,23 @@ function Header(props) {
         onClose={() => setopenDrawer(false)}
         onOpen={() => setopenDrawer(true)}
       >
-        <List>
-          <ListItem component={Link} to="/">
+        <List disablePadding>
+          <ListItem divider button component={Link} to="/">
             <ListItemText disableTypography>Home</ListItemText>
           </ListItem>
-          <ListItem component={Link} to="/services">
+          <ListItem divider button component={Link} to="/services">
             <ListItemText disableTypography>services</ListItemText>
           </ListItem>
-          <ListItem component={Link} to="/revolution">
+          <ListItem divider button component={Link} to="/revolution">
             <ListItemText disableTypography>revolution</ListItemText>
           </ListItem>
-          <ListItem component={Link} to="/about">
+          <ListItem divider button component={Link} to="/about">
             <ListItemText disableTypography>About us</ListItemText>
           </ListItem>
-          <ListItem component={Link} to="/contact">
+          <ListItem divider button component={Link} to="/contact">
             <ListItemText disableTypography>Contact us</ListItemText>
           </ListItem>
-          <ListItem component={Link} to="/estimate">
+          <ListItem divider button component={Link} to="/estimate">
             <ListItemText disableTypography>Estimate</ListItemText>
           </ListItem>
         </List>
