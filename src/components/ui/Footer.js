@@ -35,9 +35,65 @@ export default function Footer() {
 
   return (
     <footer className={classes.footer}>
-      <Grid container className={classes.mainContainer}>
-        <Grid item className={classes.link}>
-          Home
+      <Grid container justify="center" className={classes.mainContainer}>
+        <Grid item>
+          <Grid container direction="column">
+            <Grid item className={classes.link}>
+              home
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item>
+          <Grid container direction="column">
+            <Grid item className={classes.link}>
+              services
+            </Grid>
+            <Grid item className={classes.link}>
+              Custom software dev
+            </Grid>
+            <Grid item className={classes.link}>
+              Mobile app dev
+            </Grid>
+            <Grid item className={classes.link}>
+              Website dev
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item>
+          <Grid container direction="column">
+            <Grid item className={classes.link}>
+              The revolution
+            </Grid>
+            <Grid item className={classes.link}>
+              vision
+            </Grid>
+            <Grid item className={classes.link}>
+              Technology
+            </Grid>
+            <Grid item className={classes.link}>
+              Process
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item>
+          <Grid container direction="column">
+            <Grid item className={classes.link}>
+              About us
+            </Grid>
+            <Grid item className={classes.link}>
+              history
+            </Grid>
+            <Grid item className={classes.link}>
+              team
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item>
+          <Grid container direction="column">
+            <Grid item className={classes.link}>
+              contact us
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
       <img
