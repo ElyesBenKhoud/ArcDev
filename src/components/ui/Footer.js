@@ -5,6 +5,8 @@ const useStyles = makeStyles((theme) => ({
   footer: {
     backgroundColor: "#0B72B9",
     width: "100%",
+    zIndex: 1302,
+    position: "relative",
   },
   adornment: {
     width: "25em",
