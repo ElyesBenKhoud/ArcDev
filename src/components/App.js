@@ -11,7 +11,13 @@ class App extends Component {
         <BrowserRouter>
           <Header />
           <Switch>
-            <Route exact path="/" component={() => <div>Hoooooome</div>} />
+            <Route
+              exact
+              path="/"
+              component={() => (
+                <div style={{ height: "1000px" }}>Hoooooome</div>
+              )}
+            />
             <Route
               exact
               path="/services"
