@@ -3,6 +3,7 @@ import Header from "./ui/Header";
 import { ThemeProvider } from "@material-ui/styles";
 import theme from "./ui/Theme";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Footer from "./ui/Footer";
 class App extends Component {
   render() {
     return (
@@ -52,6 +53,7 @@ class App extends Component {
               component={() => <div>estimate</div>}
             />
           </Switch>
+          <Footer />
         </BrowserRouter>
       </ThemeProvider>
     );
