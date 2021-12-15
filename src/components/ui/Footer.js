@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
   },
   adornment: {
     width: "25em",
+    verticalAlign: "bottom",
   },
 }));
 export default function Footer() {
