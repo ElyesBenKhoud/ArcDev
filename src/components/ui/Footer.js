@@ -9,6 +9,12 @@ const useStyles = makeStyles((theme) => ({
   adornment: {
     width: "25em",
     verticalAlign: "bottom",
+    [theme.breakpoints.down("md")]: {
+      width: "21em",
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "15em",
+    },
   },
 }));
 export default function Footer() {
