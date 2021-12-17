@@ -21,36 +21,54 @@ function App() {
           <Route
             exact
             path="/"
-            component={() => <div style={{ height: "1000px" }}>Hoooooome</div>}
+            component={() => <div style={{ height: "376px" }}>Hoooooome</div>}
           />
-          <Route exact path="/services" component={() => <div>services</div>} />
+          <Route
+            exact
+            path="/services"
+            component={() => <div style={{ height: "376px" }}>services</div>}
+          />
           <Route
             exact
             path="/customsoftware"
-            component={() => <div>customsoftware</div>}
+            component={() => (
+              <div style={{ height: "376px" }}>customsoftware</div>
+            )}
           />
           <Route
             exact
             path="/mobileapps"
-            component={() => <div>mobileapps</div>}
+            component={() => <div style={{ height: "376px" }}>mobileapps</div>}
           />
-          <Route exact path="/websites" component={() => <div>websites</div>} />
+          <Route
+            exact
+            path="/websites"
+            component={() => <div style={{ height: "376px" }}>websites</div>}
+          />
           <Route
             exact
             path="/revolution"
-            component={() => <div>revolution</div>}
+            component={() => <div style={{ height: "376px" }}>revolution</div>}
           />
           <Route
             exact
             path="/about"
-            component={() => <div>about ussssssss</div>}
+            component={() => (
+              <div style={{ height: "376px" }}>about ussssssss</div>
+            )}
           />
           <Route
             exact
             path="/contact"
-            component={() => <div>contact ussssssss</div>}
+            component={() => (
+              <div style={{ height: "376px" }}>contact ussssssss</div>
+            )}
           />
-          <Route exact path="/estimate" component={() => <div>estimate</div>} />
+          <Route
+            exact
+            path="/estimate"
+            component={() => <div style={{ height: "376px" }}>estimate</div>}
+          />
         </Switch>
         <Footer
           value={value}
