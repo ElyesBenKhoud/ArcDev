@@ -8,6 +8,7 @@ import Home from "./Home";
 import Services from "./Services";
 import Revolution from "./Revolution";
 import About from "./About";
+import Estimate from "./Estimate";
 function App() {
   const [selectIndex, setselectIndex] = useState(0);
   const [value, setvalue] = useState(0);
@@ -93,13 +94,20 @@ function App() {
             exact
             path="/contact"
             component={() => (
-              <div style={{ height: "376px" }}>contact ussssssss</div>
+              <div style={{ height: "376px" }}>
+                <About />
+              </div>
             )}
           />
           <Route
             exact
             path="/estimate"
-            component={() => <div style={{ height: "376px" }}>estimate</div>}
+            component={() => (
+              <div style={{ height: "376px" }}>
+                {" "}
+                <Estimate />
+              </div>
+            )}
           />
         </Switch>
         <Footer
