@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Arial",
     fontSize: "0.75rem",
     fontWeight: "bold",
+    textDecoration: "none",
   },
   gridItem: {
     margin: "3em",
