@@ -19,7 +19,12 @@ export default function Revolution() {
 
   return (
     <div>
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
+      <Button
+        variant="outlined"
+        color="primary"
+        style={{ marginLeft: "40em", marginTop: "8em", textAlign: "center" }}
+        onClick={handleClickOpen}
+      >
         Open alert dialog
       </Button>
       <Dialog
@@ -29,12 +34,11 @@ export default function Revolution() {
         aria-describedby="alert-dialog-description"
       >
         <DialogTitle id="alert-dialog-title">
-          {"Use Google's location service?"}
+          {"Are you looking for revolution?"}
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Let Google help apps determine location. This means sending
-            anonymous location data to Google, even when no apps are running.
+            [ ... under-Maintenance]
           </DialogContentText>
         </DialogContent>
         <DialogActions>
