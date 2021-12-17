@@ -7,6 +7,7 @@ import Footer from "./ui/Footer";
 import Home from "./Home";
 import Services from "./Services";
 import Revolution from "./Revolution";
+import About from "./About";
 function App() {
   const [selectIndex, setselectIndex] = useState(0);
   const [value, setvalue] = useState(0);
@@ -82,7 +83,10 @@ function App() {
             exact
             path="/about"
             component={() => (
-              <div style={{ height: "376px" }}>about ussssssss</div>
+              <div style={{ height: "376px" }}>
+                {" "}
+                <About />
+              </div>
             )}
           />
           <Route
