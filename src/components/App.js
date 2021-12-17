@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Footer from "./ui/Footer";
 import Home from "./Home";
 import Services from "./Services";
+import Revolution from "./Revolution";
 function App() {
   const [selectIndex, setselectIndex] = useState(0);
   const [value, setvalue] = useState(0);
@@ -70,7 +71,12 @@ function App() {
           <Route
             exact
             path="/revolution"
-            component={() => <div style={{ height: "376px" }}>revolution</div>}
+            component={() => (
+              <div style={{ height: "376px" }}>
+                {" "}
+                <Revolution />
+              </div>
+            )}
           />
           <Route
             exact
