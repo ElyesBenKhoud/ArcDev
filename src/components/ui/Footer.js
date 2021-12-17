@@ -214,8 +214,10 @@ export default function Footer({
       <Grid container>
         <Grid
           item
+          // component will tell to code it s anchor tag
           component={"a"}
           href="https://www.facebook.com"
+          // this code to tell the browser open another tag || open app if it s on the mobile
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -223,8 +225,10 @@ export default function Footer({
         </Grid>
         <Grid
           item
+          // component will tell to code it s anchor tag
           component={"a"}
           href="https://www.twitter.com"
+          // this code to tell the browser open another tag || open app if it s on the mobile
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -232,8 +236,10 @@ export default function Footer({
         </Grid>
         <Grid
           item
+          // component will tell to code it s anchor tag
           component={"a"}
           href="https://www.instagram.com"
+          // this code to tell the browser open another tag || open app if it s on the mobile
           rel="noopener noreferrer"
           target="_blank"
         >
