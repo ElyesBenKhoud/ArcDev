@@ -36,15 +36,15 @@ export default function Footer() {
   return (
     <footer className={classes.footer}>
       <Grid container justify="center" className={classes.mainContainer}>
-        <Grid item>
-          <Grid container direction="column">
+        <Grid item className={classes.gridItem}>
+          <Grid container direction="column" spacing={2}>
             <Grid item className={classes.link}>
               home
             </Grid>
           </Grid>
         </Grid>
-        <Grid item>
-          <Grid container direction="column">
+        <Grid item className={classes.gridItem}>
+          <Grid container direction="column" spacing={2}>
             <Grid item className={classes.link}>
               services
             </Grid>
@@ -59,8 +59,8 @@ export default function Footer() {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item>
-          <Grid container direction="column">
+        <Grid item className={classes.gridItem}>
+          <Grid container direction="column" spacing={2}>
             <Grid item className={classes.link}>
               The revolution
             </Grid>
@@ -75,8 +75,8 @@ export default function Footer() {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item>
-          <Grid container direction="column">
+        <Grid item className={classes.gridItem}>
+          <Grid container direction="column" spacing={2}>
             <Grid item className={classes.link}>
               About us
             </Grid>
@@ -88,8 +88,8 @@ export default function Footer() {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item>
-          <Grid container direction="column">
+        <Grid item className={classes.gridItem}>
+          <Grid container direction="column" spacing={2}>
             <Grid item className={classes.link}>
               Contact us
             </Grid>
