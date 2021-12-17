@@ -63,7 +63,10 @@ export default function Footer({
             <Grid
               item
               component={Link}
-              onClick={() => setvalue(1)}
+              onClick={() => {
+                setvalue(1);
+                setselectIndex(0);
+              }}
               to="/services"
               className={classes.link}
             >
@@ -74,7 +77,10 @@ export default function Footer({
               component={Link}
               to="/customsoftware"
               className={classes.link}
-              onClick={() => setvalue(1)}
+              onClick={() => {
+                setvalue(1);
+                setselectIndex(1);
+              }}
             >
               Custom software dev
             </Grid>
@@ -83,14 +89,20 @@ export default function Footer({
               component={Link}
               to="/mobileapps"
               className={classes.link}
-              onClick={() => setvalue(1)}
+              onClick={() => {
+                setvalue(1);
+                setselectIndex(2);
+              }}
             >
               Mobile app dev
             </Grid>
             <Grid
               item
               component={Link}
-              onClick={() => setvalue(1)}
+              onClick={() => {
+                setvalue(1);
+                setselectIndex(3);
+              }}
               to="/websites"
               className={classes.link}
             >
