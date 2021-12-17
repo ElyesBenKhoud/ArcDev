@@ -4,6 +4,7 @@ import { ThemeProvider } from "@material-ui/styles";
 import theme from "./ui/Theme";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Footer from "./ui/Footer";
+import Home from "./Home";
 function App() {
   const [selectIndex, setselectIndex] = useState(0);
   const [value, setvalue] = useState(0);
@@ -21,7 +22,10 @@ function App() {
           <Route
             exact
             path="/"
-            component={() => <div style={{ height: "376px" }}>Hoooooome</div>}
+            component={() => (
+              // <div style={{ height: "376px" }}>
+              <Home />
+            )}
           />
           <Route
             exact
