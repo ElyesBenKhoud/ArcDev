@@ -91,7 +91,7 @@ export default function Footer() {
         <Grid item>
           <Grid container direction="column">
             <Grid item className={classes.link}>
-              contact us
+              Contact us
             </Grid>
           </Grid>
         </Grid>
