@@ -41,6 +41,18 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     height: "4em",
     width: "4em",
+    [theme.breakpoints.down("xs")]: {
+      height: "2.5em",
+      width: "2.5em",
+    },
+  },
+  socialContainer: {
+    position: "absolute",
+    marginTop: "-6em",
+    right: "1.5em",
+    [theme.breakpoints.down("xs")]: {
+      right: "0.6em",
+    },
   },
 }));
 export default function Footer({
@@ -211,7 +223,12 @@ export default function Footer({
         src={footerAdornment}
         className={classes.adornment}
       />
-      <Grid container>
+      <Grid
+        container
+        className={classes.socialContainer}
+        justify="flex-end"
+        spacing={2}
+      >
         <Grid
           item
           // component will tell to code it s anchor tag
