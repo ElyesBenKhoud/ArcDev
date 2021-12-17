@@ -116,14 +116,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Header(props) {
+function Header({ value, setvalue, selectIndex, setselectIndex }) {
   const classes = useStyles();
   const theme = useTheme();
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
   const matches = useMediaQuery(theme.breakpoints.down("md"));
   const [openDrawer, setopenDrawer] = useState(false);
   //set the value to select the tab in the tabBar
-  const [value, setvalue] = useState(0);
   // Func to handle the value on the click
   const handleChange = (e, newValue) => {
     setvalue(newValue);
@@ -132,7 +131,6 @@ function Header(props) {
   const [anchorEl, setanchorEl] = useState(null);
   const [openMenu, setopenMenu] = useState(false);
   //keep track of the active metu component
-  const [selectIndex, setselectIndex] = useState(0);
   //opening menu
   const handleClick = (e) => {
     setanchorEl(e.currentTarget);

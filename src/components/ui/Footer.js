@@ -34,7 +34,12 @@ const useStyles = makeStyles((theme) => ({
     margin: "3em",
   },
 }));
-export default function Footer() {
+export default function Footer({
+  value,
+  setvalue,
+  selectIndex,
+  setselectIndex,
+}) {
   const classes = useStyles();
 
   return (
