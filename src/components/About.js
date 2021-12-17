@@ -12,6 +12,13 @@ const useStyles = makeStyles((theme) => ({
   },
   backButton: {
     marginRight: theme.spacing(1),
+    marginLeft: "46em",
+    [theme.breakpoints.down("md")]: {
+      marginLeft: "36em",
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: "26em",
+    },
   },
   instructions: {
     marginTop: theme.spacing(1),
@@ -20,21 +27,17 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function getSteps() {
-  return [
-    "Select master blaster campaign settings",
-    "Create an ad group",
-    "Create an ad",
-  ];
+  return ["Step 1 about us", "Step 2 about us", "Step 3 about us"];
 }
 
 function getStepContent(stepIndex) {
   switch (stepIndex) {
     case 0:
-      return "Select campaign settings...";
+      return "";
     case 1:
-      return "What is an ad group anyways?";
+      return "";
     case 2:
-      return "This is the bit I really care about!";
+      return "";
     default:
       return "Unknown stepIndex";
   }
