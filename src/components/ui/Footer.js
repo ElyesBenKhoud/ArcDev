@@ -29,6 +29,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "0.75rem",
     fontWeight: "bold",
   },
+  gridItem: {
+    margin: "3em",
+  },
 }));
 export default function Footer() {
   const classes = useStyles();
