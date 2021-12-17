@@ -5,6 +5,7 @@ import theme from "./ui/Theme";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Footer from "./ui/Footer";
 import Home from "./Home";
+import Services from "./Services";
 function App() {
   const [selectIndex, setselectIndex] = useState(0);
   const [value, setvalue] = useState(0);
@@ -23,31 +24,48 @@ function App() {
             exact
             path="/"
             component={() => (
-              // <div style={{ height: "376px" }}>
-              <Home />
+              <div style={{ height: "376px" }}>
+                <Home />
+              </div>
             )}
           />
           <Route
             exact
             path="/services"
-            component={() => <div style={{ height: "376px" }}>services</div>}
+            component={() => (
+              <div style={{ height: "376px" }}>
+                {" "}
+                <Services />{" "}
+              </div>
+            )}
           />
           <Route
             exact
             path="/customsoftware"
             component={() => (
-              <div style={{ height: "376px" }}>customsoftware</div>
+              <div style={{ height: "376px" }}>
+                {" "}
+                <Services />{" "}
+              </div>
             )}
           />
           <Route
             exact
             path="/mobileapps"
-            component={() => <div style={{ height: "376px" }}>mobileapps</div>}
+            component={() => (
+              <div style={{ height: "376px" }}>
+                <Services />
+              </div>
+            )}
           />
           <Route
             exact
             path="/websites"
-            component={() => <div style={{ height: "376px" }}>websites</div>}
+            component={() => (
+              <div style={{ height: "376px" }}>
+                <Services />
+              </div>
+            )}
           />
           <Route
             exact
