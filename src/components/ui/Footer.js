@@ -4,6 +4,10 @@ import footerAdornment from "../../assets/Footer Adornment.svg";
 import { Grid } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { Hidden } from "@material-ui/core";
+import facebook from "../../assets/facebook.svg";
+import twitter from "../../assets/twitter.svg";
+import instagram from "../../assets/instagram.svg";
+
 const useStyles = makeStyles((theme) => ({
   footer: {
     backgroundColor: "#0B72B9",
@@ -33,6 +37,10 @@ const useStyles = makeStyles((theme) => ({
   },
   gridItem: {
     margin: "3em",
+  },
+  icon: {
+    height: "4em",
+    width: "4em",
   },
 }));
 export default function Footer({
@@ -203,6 +211,35 @@ export default function Footer({
         src={footerAdornment}
         className={classes.adornment}
       />
+      <Grid container>
+        <Grid
+          item
+          component={"a"}
+          href="https://www.facebook.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img alt="fb" src={facebook} className={classes.icon} />
+        </Grid>
+        <Grid
+          item
+          component={"a"}
+          href="https://www.twitter.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img alt="twitter" src={twitter} className={classes.icon} />
+        </Grid>
+        <Grid
+          item
+          component={"a"}
+          href="https://www.instagram.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img alt="ig" src={instagram} className={classes.icon} />
+        </Grid>
+      </Grid>
     </footer>
   );
 }
