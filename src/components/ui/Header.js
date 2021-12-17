@@ -221,7 +221,7 @@ function Header({ value, setvalue, selectIndex, setselectIndex }) {
           break;
       }
     });
-  }, [value, MenuOptions, selectIndex, routes]);
+  }, [value, MenuOptions, selectIndex, routes, setselectIndex, setvalue]);
 
   const tabs = (
     <React.Fragment>
